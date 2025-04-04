@@ -24,34 +24,40 @@ This is a customized version of **DeOldify**, fine-tuned on a proprietary datase
 
 ```bash
 pip install -r requirements.txt
-Download the pre-trained model:
+
+## Download the pre-trained model:
 
 🔗 Hugging Face: aminokn/colorizer-model
 
 bash
 Copy
 Edit
-wget https://huggingface.co/aminokn/colorizer-model/resolve/main/colorizer-v2.pkl -P ./models/
-Run inference:
+wget https://huggingface.co/aminokn/colorizer-model/resolve/main/colorizer-v2.pkl 
+
+## Run inference:
 
 bash
 Copy
 Edit
 python colorize.py
-📁 Project Structure
+
+## 📁 Project Structure
 bash
 Copy
 Edit
-DeOldify_Funetuning/
+
+## DeOldify_Funetuning/
+
 ├── dataset/             # Dataset (bw / color images)
 ├── models/              # Model weights (.pth / .pkl)
 ├── colorize.py          # Inference script
 ├── train_colorizer.py   # Training script
 └── README.md
-📚 Authors
+
+## 📚 Authors
 🧑 Aminokn (KBTU)
 
-🎓 Diploma project: "Image Colorization via Web Application"
+## 🎓 Diploma project: "Image Colorization via Web Application"
 
-📝 License
+## 📝 License
 MIT License
