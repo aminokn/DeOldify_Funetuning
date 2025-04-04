@@ -56,7 +56,6 @@ Edit
 ├── models/              # Trained model weights (.pth / .pkl)
 ├── colorize.py          # Inference script
 ├── train_v2.py          # Training script
-├── generators.py        # Dataloaders and learner builder
 └── README.md            # This file 🌟
 
 ### 🖼️ Example Results
