@@ -1,10 +1,13 @@
+import warnings
+warnings.filterwarnings("ignore")
+
 from deoldify.visualize import get_image_colorizer
 from PIL import ImageEnhance
 import os
 
 # === Пути ===
-bw_image_path = "/Users/aminokn/Desktop/DeOldify/dataset/train/bw/sunset.jpg"
-output_dir = "/Users/aminokn/Desktop/DeOldify/result_images"
+bw_image_path = "test_images/istockphoto-1403500817-612x612.jpg"
+output_dir = "result_images"
 os.makedirs(output_dir, exist_ok=True)
 
 # === Настройки ===
