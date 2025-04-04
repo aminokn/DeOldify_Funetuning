@@ -6,7 +6,7 @@ from PIL import ImageEnhance
 import os
 
 # === Пути ===
-bw_image_path = "test_images/istockphoto-1403500817-612x612.jpg"
+bw_image_path = "test_images/mountain-countryside-landscape-at-sunset-dramatic-sky-over-a-distant-valley-green-fields-and-trees-on-hill-beautiful-natural-landscapes-of-the-carpathians-generative-ai-variation-5-photo.jpg"
 output_dir = "result_images"
 os.makedirs(output_dir, exist_ok=True)
 

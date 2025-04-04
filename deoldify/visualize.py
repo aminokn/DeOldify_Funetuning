@@ -16,7 +16,6 @@ from IPython.display import Image as ipythonimage
 import cv2
 import logging
 
-# adapted from https://www.pyimagesearch.com/2016/04/25/watermarking-images-with-opencv-and-python/
 def get_watermarked(pil_image: Image) -> Image:
     try:
         image = cv2.cvtColor(np.array(pil_image), cv2.COLOR_RGB2BGR)
@@ -40,7 +39,6 @@ def get_watermarked(pil_image: Image) -> Image:
         final_image = Image.fromarray(rgb_image)
         return final_image
     except:
-        # Don't want this to crash everything, so let's just not watermark the image for now.
         return pil_image
 
 
@@ -335,10 +333,8 @@ class VideoColorizer:
         result_path = self.result_folder / source_path.name
         if result_path.exists():
             result_path.unlink()
-        # making copy of non-audio version in case adding back audio doesn't apply or fails.
         shutil.copyfile(str(colorized_path), str(result_path))
 
-        # adding back sound here
         audio_file = Path(str(source_path).replace('.mp4', '.aac'))
         if audio_file.exists():
             audio_file.unlink()

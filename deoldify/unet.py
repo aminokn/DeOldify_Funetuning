@@ -4,14 +4,10 @@ from fastai.torch_core import *
 from fastai.callbacks.hooks import *
 from fastai.vision import *
 
-
-# The code below is meant to be merged into fastaiv1 ideally
-
 __all__ = ['DynamicUnetDeep', 'DynamicUnetWide']
 
 
 def _get_sfs_idxs(sizes: Sizes) -> List[int]:
-    "Get the indexes of the layers where the size of the activation changes."
     feature_szs = [size[-1] for size in sizes]
     sfs_idxs = list(
         np.where(np.array(feature_szs[:-1]) != np.array(feature_szs[1:]))[0]
@@ -22,8 +18,6 @@ def _get_sfs_idxs(sizes: Sizes) -> List[int]:
 
 
 class CustomPixelShuffle_ICNR(nn.Module):
-    "Upsample by `scale` from `ni` filters to `nf` (default `ni`), using `nn.PixelShuffle`, `icnr` init, and `weight_norm`."
-
     def __init__(
         self,
         ni: int,
@@ -40,9 +34,6 @@ class CustomPixelShuffle_ICNR(nn.Module):
         )
         icnr(self.conv[0].weight)
         self.shuf = nn.PixelShuffle(scale)
-        # Blurring over (h*w) kernel
-        # "Super-Resolution using Convolutional Neural Networks without Any Checkerboard Artifacts"
-        # - https://arxiv.org/abs/1806.02658
         self.pad = nn.ReplicationPad2d((1, 0, 1, 0))
         self.blur = nn.AvgPool2d(2, stride=1)
         self.relu = relu(True, leaky=leaky)
@@ -53,8 +44,6 @@ class CustomPixelShuffle_ICNR(nn.Module):
 
 
 class UnetBlockDeep(nn.Module):
-    "A quasi-UNet block, using `PixelShuffle_ICNR upsampling`."
-
     def __init__(
         self,
         up_in_c: int,
@@ -92,8 +81,6 @@ class UnetBlockDeep(nn.Module):
 
 
 class DynamicUnetDeep(SequentialEx):
-    "Create a U-Net from a given architecture."
-
     def __init__(
         self,
         encoder: nn.Module,
@@ -168,8 +155,6 @@ class DynamicUnetDeep(SequentialEx):
 
 # ------------------------------------------------------
 class UnetBlockWide(nn.Module):
-    "A quasi-UNet block, using `PixelShuffle_ICNR upsampling`."
-
     def __init__(
         self,
         up_in_c: int,
@@ -206,8 +191,6 @@ class UnetBlockWide(nn.Module):
 
 
 class DynamicUnetWide(SequentialEx):
-    "Create a U-Net from a given architecture."
-
     def __init__(
         self,
         encoder: nn.Module,

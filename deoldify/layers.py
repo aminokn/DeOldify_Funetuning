@@ -1,10 +1,6 @@
 from fastai.layers import *
 from fastai.torch_core import *
 
-
-# The code below is meant to be merged into fastaiv1 ideally
-
-
 def custom_conv_layer(
     ni: int,
     nf: int,
@@ -21,7 +17,6 @@ def custom_conv_layer(
     self_attention: bool = False,
     extra_bn: bool = False,
 ):
-    "Create a sequence of convolutional (`ni` to `nf`), ReLU (if `use_activ`) and batchnorm (if `bn`) layers."
     if padding is None:
         padding = (ks - 1) // 2 if not transpose else 0
     bn = norm_type in (NormType.Batch, NormType.BatchZero) or extra_bn == True

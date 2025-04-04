@@ -42,8 +42,6 @@ class FeatureLoss(nn.Module):
     def __del__(self):
         self.hooks.remove()
 
-
-# Refactored code, originally from https://github.com/VinceMarron/style_transfer
 class WassFeatureLoss(nn.Module):
     def __init__(self, layer_wgts=[5, 15, 2], wass_wgts=[3.0, 0.7, 0.01]):
         super().__init__()
@@ -76,7 +74,6 @@ class WassFeatureLoss(nn.Module):
         n = tensor.shape[2]
         mu = tensor.mean(2)
         tensor = (tensor - mu[:, :, None]).squeeze(0)
-        # Prevents nasty bug that happens very occassionally- divide by zero.  Why such things happen?
         if n == 0:
             return None, None
         cov = torch.mm(tensor, tensor.t()) / float(n)
