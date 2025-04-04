@@ -20,44 +20,52 @@ This is a customized version of **DeOldify**, fine-tuned on a proprietary datase
 
 ## 🚀 Quick Start
 
-1. Install dependencies:
+### 1. Clone the repo
 
 ```bash
+git clone https://github.com/aminokn/DeOldify_Funetuning.git
+cd DeOldify_Funetuning
+
+### 2. Install dependencies
+bash
+Copy
+Edit
 pip install -r requirements.txt
 
-## Download the pre-trained model:
-
-🔗 Hugging Face: aminokn/colorizer-model
+### 3. Download the model weights
+📦 Hugging Face Model: aminokn/colorizer-model
 
 bash
 Copy
 Edit
-wget https://huggingface.co/aminokn/colorizer-model/resolve/main/colorizer-v2.pkl 
+wget https://huggingface.co/aminokn/colorizer-model/resolve/main/colorizer-v2.pkl -P ./models/
 
-## Run inference:
-
+### 4. Run the colorizer
 bash
 Copy
 Edit
 python colorize.py
 
-## 📁 Project Structure
+###📁 Project Structure
 bash
 Copy
 Edit
 
-## DeOldify_Funetuning/
-
-├── dataset/             # Dataset (bw / color images)
-├── models/              # Model weights (.pth / .pkl)
+### DeOldify_Funetuning/
+├── dataset/             # Training images (bw / color)
+├── models/              # Trained model weights (.pth / .pkl)
 ├── colorize.py          # Inference script
-├── train_colorizer.py   # Training script
-└── README.md
+├── train_v2.py          # Training script
+├── generators.py        # Dataloaders and learner builder
+└── README.md            # This file 🌟
 
-## 📚 Authors
-🧑 Aminokn (KBTU)
+### 🖼️ Example Results
+Coming soon... (or insert a preview grid of before/after images)
 
-## 🎓 Diploma project: "Image Colorization via Web Application"
+### 🤝 Authors
+Aminokn – KBTU
 
-## 📝 License
-MIT License
+🎓 Diploma Thesis: "Image Colorization via Web Application"
+
+### 📄 License
+Licensed under the MIT License.
