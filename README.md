@@ -19,50 +19,53 @@ This is a customized version of **DeOldify**, fine-tuned on a proprietary datase
 ---
 
 ## 🚀 Quick Start
-
 ### 1. Clone the repo
 
-```bash
+```
 git clone https://github.com/aminokn/DeOldify_Funetuning.git
 cd DeOldify_Funetuning
+```
 
 ### 2. Install dependencies
-bash
-Copy
-Edit
+```
 pip install -r requirements.txt
+```
 
 ### 3. Download the model weights
 📦 Hugging Face Model: aminokn/colorizer-model
 
-bash
-Copy
-Edit
+```
 wget (https://huggingface.co/aminokn/colorizer-model/resolve/main/colorizer_vgg_fastai1.pkl)
-
+```
 ### 4. Run the colorizer
-bash
-Copy
-Edit
+```
 python colorize.py
+```
 
-###📁 Project Structure
-bash
-Copy
-Edit
-
-### DeOldify_Funetuning/
+### 📁 Project Structure
+```
+DeOldify_Funetuning/
 ├── dataset/             # Training images (bw / color)
 ├── models/              # Trained model weights (.pth / .pkl)
 ├── colorize.py          # Inference script
 ├── train_v2.py          # Training script
 └── README.md            # This file 🌟
-
+```
 ### 🖼️ Example Results
-Coming soon... (or insert a preview grid of before/after images)
+#### Before/After Colorization
+![comparison_images/bird-8788491_1280_comparison.jpg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/bird-8788491_1280_comparison.jpg)
+![comparison_images/elephant_comparison.jpg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/elephant_comparison.jpg)
+![comparison_images/nature-3_comparison.jpg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/nature-3_comparison.jpg)
+![comparison_images/heaven_comparison.jpg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/heaven_comparison.jpg)
+![comparison_images/horse%20comparison.jpeg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/horse%20comparison.jpeg)
+![comparison_images/jaguar.jpeg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/jaguar.jpeg)
+![comparison_images/man_comparison.jpg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/man_comparison.jpg)
+![comparison_images/nature.jpeg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/nature.jpeg)
+![comparison_images/tools-feature_black-and-white-filter_promo-showcase_01-AFTER4x_comparison.jpg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/tools-feature_black-and-white-filter_promo-showcase_01-AFTER4x_comparison.jpg)
+![comparison_images/woman%20with%20hat_comparison.jpg](https://github.com/aminokn/DeOldify_Funetuning/blob/master/comparison_images/woman%20with%20hat_comparison.jpg)
 
 ### 🤝 Authors
-Aminokn – KBTU
+[aminokn](https://github.com/aminokn) – KBTU
 
 🎓 Diploma Thesis: "Image Colorization via Web Application"
 
