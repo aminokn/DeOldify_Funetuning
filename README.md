@@ -38,7 +38,7 @@ pip install -r requirements.txt
 bash
 Copy
 Edit
-wget https://huggingface.co/aminokn/colorizer-model/resolve/main/colorizer-v2.pkl -P ./models/
+wget [https://huggingface.co/aminokn/colorizer-model/resolve/main/colorizer-v2.pkl -P ./models/](https://huggingface.co/aminokn/colorizer-model/resolve/main/colorizer_vgg_fastai1.pkl)
 
 ### 4. Run the colorizer
 bash
