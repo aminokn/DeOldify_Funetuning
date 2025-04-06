@@ -1,3 +1,18 @@
+#Installing Python 3.8
+cd ~
+wget https://www.python.org/ftp/python/3.8.18/Python-3.8.18.tgz
+tar -xvzf Python-3.8.18.tgz
+cd Python-3.8.18
+./configure --prefix=$HOME/.local/python38 --enable-optimizations
+make -j$(nproc)      # Сборка с использованием всех ядер
+make install         # Установка в ~/.local/python38
+export PATH="$HOME/.local/python38/bin:$PATH"
+
+# Virtual environment
+~/.local/python38/bin/python3.8 -m venv ~/venv38
+source ~/venv38/bin/activate
+
+
 # Core DeOldify + fastai
 fastai==1.0.60
 torch==1.11.0+cu113
