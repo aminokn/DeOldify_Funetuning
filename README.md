@@ -17,6 +17,12 @@ This is a customized version of **DeOldify**, fine-tuned on a proprietary datase
 | 🪄 Use Case       | Automatic photo colorization       |
 
 ---
+## 📌 Key Features
+
+✅ Detects faces on images using MediaPipe FaceMesh (even partially visible ones)  
+✅ Dynamically adjusts `render_factor` and color enhancement  
+✅ Fine-tuned DeOldify model for portrait colorization  
+✅ Generates side-by-side comparison (before/after)
 
 ## 🚀 Quick Start
 ### 1. Clone the repo
