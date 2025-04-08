@@ -13,7 +13,7 @@ This is a customized version of **DeOldify**, fine-tuned on a proprietary datase
 | 🧠 Framework      | `fastai v1`                        |
 | 🎯 Loss Function  | `VGGPerceptualLoss`                |
 | 📈 Metric         | `PSNR`                             |
-| 🖼 Dataset Size   | 2000+ grayscale/color image pairs  |
+| 🖼 Dataset Size   | 2000+ grayscale/color image pairs from Unsplash |
 | 🪄 Use Case       | Automatic photo colorization       |
 
 ---
