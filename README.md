@@ -41,6 +41,7 @@ pip install -r requirements.txt
 📦 Hugging Face Model: aminokn/colorizer-model
 
 ```
+wget https://data.deepai.org/deoldify/ColorizeArtistic_gen.pth 
 wget (https://huggingface.co/aminokn/colorizer-model/resolve/main/colorizer_vgg_fastai1.pkl)
 ```
 ### 4. Run the colorizer
